@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Room</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h2>Add Room</h2>
+
+<form method="post" onsubmit="roomAdded()">
+Room No: <input type="text" name="roomNo"><br><br>
+Capacity: <input type="number" name="capacity"><br><br>
+AC: <input type="checkbox" name="ac"><br><br>
+Washroom: <input type="checkbox" name="washroom"><br><br>
+<button>Add Room</button>
+</form>
+
+<br>
+<a href="/">Back</a>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

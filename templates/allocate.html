@@ -1,0 +1,29 @@
+<h2>Allocate Room</h2>
+
+<form method="POST">
+    Number of Students:
+    <input type="number" name="students" required><br><br>
+
+    AC Required:
+    <input type="checkbox" name="ac"><br>
+
+    Attached Washroom:
+    <input type="checkbox" name="washroom"><br><br>
+
+    <button type="submit">Allocate</button>
+</form>
+
+<br>
+
+{% if room %}
+<h3>Room Allocated:</h3>
+Room No: {{ room[0] }} <br>
+Capacity: {{ room[1] }} <br>
+AC: {{ room[2] }} <br>
+Washroom: {{ room[3] }}
+{% elif room is not none %}
+<h3>No room available</h3>
+{% endif %}
+
+<br>
+<a href="/">Back</a>
