@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Room List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+
+<h2>Room List</h2>
+
+<a href="/add">Add Room</a> |
+<a href="/search">Search Room</a>
+
+<br><br>
+
+<table>
+<tr>
+<th>Room No</th>
+<th>Capacity</th>
+<th>AC</th>
+<th>Washroom</th>
+<th>Allocate</th>
+</tr>
+
+{% for room in rooms %}
+<tr>
+<td>{{room[0]}}</td>
+<td>{{room[1]}}</td>
+<td>{{room[2]}}</td>
+<td>{{room[3]}}</td>
+<td>
+<form action="/allocate" method="post" onsubmit="return confirmAllocate()">
+<input type="hidden" name="roomNo" value="{{room[0]}}">
+<button type="submit">Allocate</button>
+</form>
+</td>
+</tr>
+{% endfor %}
+</table>
+
+</body>
+</html>

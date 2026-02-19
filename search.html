@@ -1,0 +1,39 @@
+<h2>Search Rooms</h2>
+
+<form method="POST">
+    Minimum Capacity:
+    <input type="number" name="capacity" required><br><br>
+
+    AC Required:
+    <input type="checkbox" name="ac"><br>
+
+    Attached Washroom:
+    <input type="checkbox" name="washroom"><br><br>
+
+    <button type="submit">Search</button>
+</form>
+    
+<br>
+
+{% if rooms %}
+<table border="1">
+<tr>
+<th>Room No</th>
+<th>Capacity</th>
+<th>AC</th>
+<th>Washroom</th>
+</tr>
+
+{% for room in rooms %}
+<tr>
+<td>{{ room[0] }}</td>
+<td>{{ room[1] }}</td>
+<td>{{ room[2] }}</td>
+<td>{{ room[3] }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endif %}
+
+<br>
+<a href="/">Back</a>

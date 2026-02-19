@@ -1,0 +1,38 @@
+body {
+    font-family: Arial;
+    background: #f4f6f9;
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+table {
+    border-collapse: collapse;
+    width: 60%;
+    background: white;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
